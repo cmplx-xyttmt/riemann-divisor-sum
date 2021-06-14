@@ -6,7 +6,7 @@ from dataclasses import dataclass
 from typing import List
 
 
-@dataclass
+@dataclass(eq=True, frozen=True)
 class RiemannDivisorSum:
     n: int
     divisor_sum: int
