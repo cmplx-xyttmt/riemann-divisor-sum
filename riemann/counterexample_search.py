@@ -1,14 +1,9 @@
 '''Search for a witness that the Riemann Hypothesis is false.'''
 import math
-from riemann.divisor import divisor_sum
+from riemann.divisor import divisor_sum, witness_value
 
 
 SEARCH_START = 5041
-
-
-def witness_value(n: int) -> float:
-    denominator = n * math.log(math.log(n))
-    return divisor_sum(n) / denominator
 
 
 def search(max_range: int, search_start: int = SEARCH_START) -> int:
