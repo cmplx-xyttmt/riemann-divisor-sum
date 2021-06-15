@@ -1,7 +1,7 @@
 '''Compute the sum of divisors of a number.'''
 from functools import lru_cache
-from riemann.database import RiemannDivisorSum
-from typing import List
+from riemann.types import RiemannDivisorSum
+from typing import List, Tuple
 from numba import njit
 import math
 
@@ -22,6 +22,21 @@ def divisor_sum(n: int) -> int:
                 the_sum += n // i
         i += 1
     return the_sum
+
+
+@njit
+def prime_factor_divisor_sum(prime_factors: List[Tuple[int]]) -> int:
+    '''Compute the sum of the divisors of a positive integer
+    expressed in its prime factorization
+    '''
+    if not prime_factors:
+        return 1
+    
+    divisor_sum = 1
+    for (prime, exponent) in prime_factors:
+        divisor_sum *= int((prime ** (exponent + 1) - 1) / (prime - 1))
+    
+    return divisor_sum
 
 
 @njit

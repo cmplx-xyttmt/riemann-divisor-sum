@@ -14,7 +14,7 @@ class RiemannDivisorSum:
                 )
 
 
-@dataclass
+@dataclass(frozen=True)
 class SummaryStats:
     largest_computed_n: RiemannDivisorSum
     largest_witness_value: RiemannDivisorSum
