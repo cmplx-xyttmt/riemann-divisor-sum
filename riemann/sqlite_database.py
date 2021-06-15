@@ -1,5 +1,6 @@
 from dataclasses import asdict
-from riemann.database import DivisorDb, RiemannDivisorSum, SummaryStats
+from riemann.database import DivisorDb
+from riemann.types import RiemannDivisorSum, SummaryStats
 from typing import List
 import sqlite3
 

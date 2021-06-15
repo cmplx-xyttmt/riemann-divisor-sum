@@ -2,21 +2,8 @@
 
 from abc import ABC
 from abc import abstractmethod
-from dataclasses import dataclass
 from typing import List
-
-
-@dataclass(eq=True, frozen=True)
-class RiemannDivisorSum:
-    n: int
-    divisor_sum: int
-    witness_value: float
-
-
-@dataclass
-class SummaryStats:
-    largest_computed_n: RiemannDivisorSum
-    largest_witness_value: RiemannDivisorSum
+from riemann.types import RiemannDivisorSum, SummaryStats
 
 
 class DivisorDb(ABC):

@@ -1,6 +1,5 @@
 from riemann.database import DivisorDb
-from riemann.database import RiemannDivisorSum
-from riemann.database import SummaryStats
+from riemann.types import RiemannDivisorSum, SummaryStats
 from riemann.in_memory_database import InMemoryDivisorDb
 from riemann.sqlite_database import SqliteDivisorDb
 import pytest
