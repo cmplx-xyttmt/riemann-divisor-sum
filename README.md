@@ -1,5 +1,7 @@
 # Divisor Sums for the Riemann Hypothesis
 
+![Project Build](https://github.com/cmplx-xyttmt/riemann-divisor-sum/actions/workflows/python-app.yml/badge.svg)
+
 This project is based on [Jeremy Kun's searching for RH counterexamples blog](https://jeremykun.com/2020/09/11/searching-for-rh-counterexamples-setting-up-pytest/).
 
 I'm using this to practice and learn about TDD in python and productionizing.
